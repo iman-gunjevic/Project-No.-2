@@ -1,0 +1,142 @@
+/*
+eerie black #1b1b1b
+raisin black #242124
+platinum (grey) #DADCE0
+french grey #B2BECD
+anti flast white #f2f3f4 
+Seasalt white #f9fbfd
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    user-select: none;
+
+}
+
+  
+nav {
+    width: 100%;
+    height: 64px;
+    position: absolute;
+    border-bottom: solid thin #2e2e2e;
+}
+  
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 768px; 
+    line-height: 63px;
+    margin: 0 auto;
+}
+  
+nav li {
+    list-style: none;
+}
+  
+nav a {
+    text-decoration: none;
+    color: #9aa0a6;
+    transition: color 0.5s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* ----- MAIN page ----- */
+
+.hero-fold {
+    height: 100vh;
+    background-color: #202124;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-fold-content {
+    width: 75vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 10px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.hero-note {
+    margin: auto;
+}
+
+.hero-note h1 {
+    font-size: 3vw;
+}
+
+.hero-note p {
+    font-size: 2vw;
+    color: #B2BECD;
+}
+
+b {
+    background: -webkit-linear-gradient(#38afff, #0072bc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+
+.hero-image {
+    margin: auto 0 auto auto;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    float: right;   
+
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+@media screen and (max-width: 768px) {
+
+    nav ul {
+        width: 320px;
+        font-size: 12px;
+    }
+
+    .hero-fold-content {
+        width: 75vw;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-row-gap: 10px;
+    }
+
+    .hero-note h1 {
+        font-size: 12vw;
+    }
+    
+    .hero-note p {
+        font-size: 6vw;
+    }
+
+    .hero-image img {
+        margin: 0 0 0 0;
+        width: 100%;
+    }   
+    }
+
+  
